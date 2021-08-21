@@ -31,5 +31,10 @@ public class ForTesting {
 
 		assertEquals("HAPPY", userMood.analyseMood(null));
 	}
+	@Test
+	public void givenNullMoodShouldReturnSad() {
+
+		assertEquals("Sad", userMood.analyseMood(null));
+	}
 
 }

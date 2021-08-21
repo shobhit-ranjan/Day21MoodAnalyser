@@ -39,11 +39,13 @@ public class MoodAnalyser {
 			} else {
 				return "HAPPY";
 			}
-		} catch (Exception exception) {
+		}  catch (Exception exception) {
 
 		}
-		return "HAPPY";
+		 return "HAPPY";
 
 	}
+	
+
 
 }
