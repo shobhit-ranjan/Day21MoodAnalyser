@@ -7,7 +7,7 @@ public class ForTesting {
 
 	@Test
 	public void ThisShouldGiveUsBackMoodThatIsEitherHappyOrSad() {
-      assertEquals("Sad", userMood.analyseMood());
+		assertEquals("Sad", userMood.analyseMood());
 	}
 
 	@Test
@@ -18,11 +18,18 @@ public class ForTesting {
 
 	@Test
 	public void ThisShouldGiveTheMessageFrom() {
-      assertEquals("HAPPY", userMood.analyseMood("no i am not in good mood or sad today "));
+		assertEquals("HAPPY", userMood.analyseMood("no i am not in good mood or sad today "));
 	}
+
 	@Test
 	public void ThisShouldGiveTheMessageFromGivingCorrectInput() {
-      assertEquals("HAPPY", userMood.analyseMood("yes i am in goog mood happy today "));
+		assertEquals("HAPPY", userMood.analyseMood("yes i am in goog mood happy today "));
+	}
+
+	@Test
+	public void givenNullMoodShouldReturnHappy() {
+
+		assertEquals("HAPPY", userMood.analyseMood(null));
 	}
 
 }

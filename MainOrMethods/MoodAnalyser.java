@@ -29,15 +29,20 @@ public class MoodAnalyser {
 		}
 
 	}
-
+//try catch block for exception to if we get any to parent class is there
 	public String analyseMood(String message) {
 		String newmessage = message;
-		if (newmessage.contains("Sad") || newmessage.contains("sad") || newmessage.contains("SAD")) {
-			return "SAD";
+		try {
+			if (newmessage.contains("Sad") || newmessage.contains("sad") || newmessage.contains("SAD")) {
+				return "SAD";
 
-		} else {
-			return "HAPPY";
+			} else {
+				return "HAPPY";
+			}
+		} catch (Exception exception) {
+
 		}
+		return "HAPPY";
 
 	}
 
